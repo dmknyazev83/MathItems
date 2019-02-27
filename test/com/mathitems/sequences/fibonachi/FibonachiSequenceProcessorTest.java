@@ -15,12 +15,25 @@ public class FibonachiSequenceProcessorTest {
 	}
 	
 	@Test
-	public void getFibonachiNumberTest(){
-		
+	public void getFibonachiNumberTest(){		
 		Assert.assertEquals(1, processor.getFibonachiNumber(1));
 		Assert.assertEquals(1, processor.getFibonachiNumber(2));
 		Assert.assertEquals(3, processor.getFibonachiNumber(4));	
-		Assert.assertEquals(21, processor.getFibonachiNumber(8));		
+		Assert.assertEquals(21, processor.getFibonachiNumber(8));	
+		Assert.assertEquals(144, processor.getFibonachiNumber(12));		
+		Assert.assertEquals(6765, processor.getFibonachiNumber(20));	
+		Assert.assertEquals(196418, processor.getFibonachiNumber(27));
+	}
+	
+	@Test
+	public void getFibonachiRecursionTest(){
+		Assert.assertEquals(1, processor.getFibonachiRecursion(1));
+		Assert.assertEquals(1, processor.getFibonachiRecursion(2));
+		Assert.assertEquals(3, processor.getFibonachiRecursion(4));	
+		Assert.assertEquals(21, processor.getFibonachiRecursion(8));	
+		Assert.assertEquals(144, processor.getFibonachiRecursion(12));
+		Assert.assertEquals(6765, processor.getFibonachiRecursion(20));
+		Assert.assertEquals(196418, processor.getFibonachiRecursion(27));
 	}
 
 }

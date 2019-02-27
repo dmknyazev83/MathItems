@@ -19,5 +19,13 @@ public class FibonachiSequenceProcessor {
 		
 		return value;
 	}
+	
+	public int getFibonachiRecursion(int index) {
+		if(index <= 2 ){
+			return 1;
+		}else{
+			return getFibonachiRecursion(index - 1) + getFibonachiRecursion(index - 2);
+		}
+	}
 
 }
