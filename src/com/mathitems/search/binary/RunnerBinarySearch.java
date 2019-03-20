@@ -32,12 +32,14 @@ public class RunnerBinarySearch {
 		
 		int[] testArray = {4, 6, 8, 12, 13, 14, 21, 26, 29, 45, 67, 78, 79, 82};
 		BinarySearchProcessor binarySearchProcessor = new BinarySearchProcessor();
-		int index1 = binarySearchProcessor.findIndexWithRecursion(testArray, 20);
+		int index1 = binarySearchProcessor.findIndexWithRecursion(testArray, 2);
 		System.out.println("Index1 = " + index1);
-		int index2 = binarySearchProcessor.findIndexWithRecursion(testArray, 22);
+		int index2 = binarySearchProcessor.findIndexWithRecursion(testArray, 20);
 		System.out.println("Index2 = " + index2);
-		int index3 = binarySearchProcessor.findIndexWithRecursion(testArray, 87);
+		int index3 = binarySearchProcessor.findIndexWithRecursion(testArray, 22);
 		System.out.println("Index3 = " + index3);
+		int index4 = binarySearchProcessor.findIndexWithRecursion(testArray, 87);
+		System.out.println("Index4 = " + index4);
 		
 	}
 
