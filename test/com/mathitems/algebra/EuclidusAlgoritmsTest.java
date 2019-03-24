@@ -21,6 +21,9 @@ public class EuclidusAlgoritmsTest {
 
 		Assert.assertEquals(8, euclidus.findGreatCommonDelimiter(56, 32));
 		Assert.assertEquals(8, euclidus.findGreatCommonDelimiter(32, 56));
+		
+		Assert.assertEquals(13, euclidus.findGreatCommonDelimiter(13, 169));
+		Assert.assertEquals(13, euclidus.findGreatCommonDelimiter(169, 13));
 	}
 
 }
