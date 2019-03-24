@@ -37,5 +37,17 @@ public class EuclidusAlgoritmsTest {
 		Assert.assertEquals(13, euclidus.findGreatCommonDelimiterSubstraction(13, 169));
 		Assert.assertEquals(13, euclidus.findGreatCommonDelimiterSubstraction(169, 13));
 	}
+	
+	@Test
+	public void findGreatCommonDelimiterBothTest(){
+		Assert.assertEquals(euclidus.findGreatCommonDelimiter(30, 18), euclidus.findGreatCommonDelimiterSubstraction(30, 18));
+		Assert.assertEquals(euclidus.findGreatCommonDelimiter(18, 30), euclidus.findGreatCommonDelimiterSubstraction(18, 30));	
+		
+		Assert.assertEquals(euclidus.findGreatCommonDelimiter(56, 32), euclidus.findGreatCommonDelimiterSubstraction(56, 32));
+		Assert.assertEquals(euclidus.findGreatCommonDelimiter(32, 56), euclidus.findGreatCommonDelimiterSubstraction(32, 56));	
+		
+		Assert.assertEquals(euclidus.findGreatCommonDelimiter(13, 169), euclidus.findGreatCommonDelimiterSubstraction(13, 169));
+		Assert.assertEquals(euclidus.findGreatCommonDelimiter(169, 13), euclidus.findGreatCommonDelimiterSubstraction(169, 13));	
+	}
 
 }
