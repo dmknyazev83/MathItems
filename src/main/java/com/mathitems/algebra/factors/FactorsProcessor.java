@@ -2,6 +2,11 @@ package com.mathitems.algebra.factors;
 
 public class FactorsProcessor {
 	
+	/**
+	 * Here we are find all numbers that divide without remainder on passed value.
+	 * @param value
+	 * @return array of integer numbers that are divided without remainder 
+	 */
 	public int[] findFactors(int value){
 		int end = value/2;
 		int size = 2;
