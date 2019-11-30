@@ -52,8 +52,38 @@ public class DefineNumbersTest {
 	@Test
 	public void createPifagorTriaplesTest(){
 		List<int[]> actulTriples = defineNumber.createPifagorTriaples(10);
+		int[] pifTriples1 = {3,4,5};
+		boolean theSameTriples1 = false;
+		int[] pifTriples2 = {6,8,10};
+		boolean theSameTriples2 = false;
 		
+		for(int[] itemArray : actulTriples){
+			if(!theSameTriples1){
+				theSameTriples1 = chechArraysElementsEquality(pifTriples1, itemArray);
+			}
+			
+			if(!theSameTriples2){
+				theSameTriples2 = chechArraysElementsEquality(pifTriples2, itemArray);
+			}
+		}		
 		
+		Assert.assertTrue(theSameTriples1);
+		Assert.assertTrue(theSameTriples2);
+		
+	}
+	
+	private boolean chechArraysElementsEquality(int[] expected, int[] actual){
+		if(expected.length == actual.length){
+			boolean result = false;
+			for(int i = 0; i < expected.length; i++){
+				result = expected[i] == actual[i];
+				if(result){
+					return result;
+				}
+			}
+		}
+		
+		return false;
 	}
 
 }

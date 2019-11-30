@@ -1,5 +1,8 @@
 package com.mathitems.sequences.fibonachi;
 
+import java.util.Optional;
+import java.util.stream.Stream;
+
 public class FibonachiSequenceProcessor {
 	
 	/**
@@ -36,6 +39,29 @@ public class FibonachiSequenceProcessor {
 		}else{
 			return getFibonachiRecursion(index - 1) + getFibonachiRecursion(index - 2);
 		}
+	}
+	
+	/**
+	 * Calculates Fibonachi value for passes index by creation stream.
+	 * @param index
+	 * @return Fibonachi value
+	 */
+	public int getFibonachiStream(int index){
+		final int[] initalSize = {0, 1};
+		Optional<int[]> arrFibonachi = Stream.iterate(initalSize, arr -> {
+			final int[] item = new int[2];
+			item[0] = arr[1];
+			item[1] = arr[0] + arr[1];
+			return item;		
+			
+		}   ).limit(index).skip(index - 1).findFirst();
+		
+		if(arrFibonachi.isPresent()){
+			return arrFibonachi.get()[1];
+		}
+		
+		throw new IllegalStateException(String.format("Something wrong with calculation of fibonachi number via stream logic, passed value of index is %d", index));
+				
 	}
 
 }

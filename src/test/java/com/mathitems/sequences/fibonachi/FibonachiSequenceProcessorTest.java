@@ -35,5 +35,16 @@ public class FibonachiSequenceProcessorTest {
 		Assert.assertEquals(6765, processor.getFibonachiRecursion(20));
 		Assert.assertEquals(196418, processor.getFibonachiRecursion(27));
 	}
+	
+	@Test
+	public void getFibonachiStreamTest(){
+		Assert.assertEquals(1, processor.getFibonachiStream(1));
+		Assert.assertEquals(1, processor.getFibonachiStream(2));
+		Assert.assertEquals(3, processor.getFibonachiStream(4));	
+		Assert.assertEquals(21, processor.getFibonachiStream(8));	
+		Assert.assertEquals(144, processor.getFibonachiStream(12));
+		Assert.assertEquals(6765, processor.getFibonachiStream(20));
+		Assert.assertEquals(196418, processor.getFibonachiStream(27));
+	}
 
 }
